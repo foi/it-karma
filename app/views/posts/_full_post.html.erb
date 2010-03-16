@@ -1,0 +1,13 @@
+<% @posts.each do |post| %>
+	<div id="wrapper">
+		<%= render :partial => 'posts/astro', :locals => { :post => post } %>
+		<div id="wrapper_post">
+		  <%= render :partial => 'posts/post', :locals => { :post => post } %>
+		<br />
+	  <% if admin? %>
+		    <%= link_to 'изменить', edit_post_path(post) %>
+		    <%= link_to 'уничтожить', post, :confirm => 'уверен?', :method => :delete %>
+		<% end %>
+		</div>
+  </div>
+<% end %>

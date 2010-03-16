@@ -1,0 +1,14 @@
+<div id="wrap_p_and_c">
+  <%= render :partial => 'show_post' %>
+<!-- list of comments -->
+<div id="cc">
+<% for c in @comments %>
+	<%= render :partial => 'comments/comment', :locals => { :c => c } %>
+<% end %>
+</div>
+<!-- leave a comment form-->
+<img id="textile" src="/images/textile.png"/>
+<%= render :partial => 'comments/form', :locals => { :id => @post.id } %>
+<br />
+<h3><%= link_to 'назад', root_url %> </h3>
+</div>

@@ -1,0 +1,2 @@
+<h2> <%= link_to Post.find(c.post_id).title, post_path(c.post_id) %> </h2>
+<%= render :partial => 'comments/comment', :locals => { :c => c } %>

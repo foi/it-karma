@@ -1,0 +1,8 @@
+racc
+rexical
+rake-compiler
+rails --version 2.3.5
+nokogiri
+acts-as-taggable-on --source http://gemcutter.org
+will_paginate --source http://gemcutter.org
+RedCloth

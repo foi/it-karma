@@ -1,0 +1,20 @@
+<div id="c">
+	<div id="c_ava">
+			<%= image_tag('http://www.gravatar.com/avatar.php?gravatar_id=' + Digest::MD5.hexdigest(h(c.email.downcase)) + '&size=70', :id => "comment_ava" ) %>
+	</div> 
+	<div id="c_name"><b><%= c.name %></b> написал(а):<div id="c_date" style='border-bottom: 1px solid <%= $post_color %>'> <%= c.created_at.to_s(:db) %> GMT</div></div>  
+
+	<div id="c_ava_and_c">
+			<div id="c_comment" style='border-bottom: 1px solid <%= $post_color %>'>
+				<%= c.comment %>
+			</div>
+	</div>
+	<% if admin? %>
+		 <div id="c_opt">
+	     <%= link_to "изменить",  edit_comment_path(c) %>
+	     <%= link_to 'удалить', c, :confirm => 'уверен?', :method => :delete %>
+	   </div>
+	<% end %>
+</div>
+
+
