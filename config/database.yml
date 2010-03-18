@@ -1,9 +1,9 @@
 #IF SQLITE 3
-#development:
-#  adapter: sqlite3
-#  database: db/development.sqlite3
-#  pool: 5
-#  timeout: 5000
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
 
 #test:
 #  adapter: sqlite3
@@ -17,14 +17,14 @@
 #  pool: 5
 #  timeout: 5000
 #IF POSTGRES
-development:
-  adapter: postgresql
-  database: it-karma
+#development:
+#  adapter: postgresql
+#  database: it-karma
 
-test:
-  adapter: postgresql
-  database: it-karma
+#test:
+#  adapter: postgresql
+#  database: it-karma
 
-production:
- adapter: postgresql
- database: it-karma
+#production:
+# adapter: postgresql
+# database: it-karma
