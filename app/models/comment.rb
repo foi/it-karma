@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
 	
 	belongs_to :post, :counter_cache => true
 	
-  named_scope :by_date, lambda { { :order => "created_at DESC" } }
+    named_scope :by_date, lambda { { :order => "created_at DESC" } }
 
 	acts_as_textiled :comment
 	

@@ -1,2 +1,1 @@
-Не забудьте rake db:migrate : ), в app/controllers/session_controller.rb установить логин и пароль. 
-В .gems rails написан т.к. на heroku.com с ree 1.8.7/mri 1.9.1 нет rails по умолчанию.
+My blog engine :) truly with astrology

@@ -10,10 +10,10 @@ class SessionController < ApplicationController
 	
 	def authenticate
 		authenticate_or_request_with_http_basic do |n, p|
-			n == "username" && p == "password" 
+			n == "username" && p == "pass" 
 			@n, @p = n, p
 		end
-		if @n == "username" && @p == "password" 
+		if @n == "username" && @p == "pass" 
 			session[:admin] = true
 			redirect_to root_url
 		end

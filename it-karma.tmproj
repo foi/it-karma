@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/comments/_comment.html.erb</string>
+	<string>lib/rcfootnotes.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,54 +21,12 @@
 	<integer>332</integer>
 	<key>metaData</key>
 	<dict>
-		<key>README</key>
+		<key>app/views/find/o.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/controllers/comments_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>17</integer>
-				<key>line</key>
-				<integer>23</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/controllers/posts_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/controllers/session_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>26</integer>
+				<integer>129</integer>
 				<key>line</key>
 				<integer>12</integer>
 			</dict>
@@ -77,73 +35,40 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/views/comments/_comment.html.erb</key>
+		<key>lib/astronow.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>155</integer>
+				<integer>3</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>77</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>56</integer>
 		</dict>
-		<key>app/views/find/o.html.erb</key>
+		<key>lib/rcfootnotes.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>237</integer>
+				<integer>3</integer>
 				<key>line</key>
-				<integer>13</integer>
+				<integer>9</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-		</dict>
-		<key>config/database.yml</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>5</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>public/stylesheets/scaffold.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>210</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>210</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>config/database.yml</string>
-		<string>app/controllers/session_controller.rb</string>
-		<string>public/stylesheets/scaffold.css</string>
 		<string>app/views/find/o.html.erb</string>
-		<string>README</string>
-		<string>app/controllers/posts_controller.rb</string>
-		<string>app/controllers/comments_controller.rb</string>
-		<string>app/views/comments/_comment.html.erb</string>
+		<string>lib/astronow.rb</string>
+		<string>lib/rcfootnotes.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
