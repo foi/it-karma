@@ -1,3 +1,4 @@
+require "astronow"
 require 'rcfootnotes'
 
 class ApplicationController < ActionController::Base

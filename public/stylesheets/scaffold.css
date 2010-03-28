@@ -10,8 +10,8 @@ a:hover{background-color:#9FE4FF;color:#0F0F0F}
 #errorExplanation h2{background-color:#c00;color:#fff;font-size:12px;font-weight:700;margin:-7px;padding:5px 5px 5px 15px;text-align:left}
 #errorExplanation p{color:#333;margin-bottom:0;padding:5px}
 #errorExplanation ul li{font-size:12px;list-style:square}
-#tag_cloud>p,#tags>p,#title,#title a,#comments>a,h2{font-family:Arial,serif;font-size:24px}
-h2{line-height:1.0}
+#tag_cloud>p,#tag_cloud>a,#tags>p,#title,#title a,#comments>a{font-family:Arial,serif;font-size:24px}
+h2{font-size:24px;line-height:1.0}
 #wrap_p_and_c,#wrapper{max-width:1004px;min-width:940px}
 #post_body,#post_title{width:870px}
 #post_tag_list{width:840px}
@@ -50,6 +50,6 @@ table{border-collapse:separate;border-spacing:0}
 th{background-color:#3F3F3F;border-bottom:1px solid #000;color:#fff;font-weight:700}
 th,td{padding:4px 10px 4px 5px}
 table,td,th{vertical-align:middle}
-blockquote{font:120% serif;border-top:2px solid #ccc;border-bottom:2px solid #ccc;}
+blockquote{font:italic 120% serif;border-top:2px solid #ccc;border-bottom:2px solid #ccc;color:#606060}
 #wrapper,#wrap_p_and_c,#about{margin:0 auto}
-#comments,#links,#c_opt{float:right}
+#comments,#links,#c_opt{float:right} 

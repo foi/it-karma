@@ -1,5 +1,3 @@
-require "astronow"
-
 class PostsController < ApplicationController
 
 	before_filter :check_permission, :only => [ :new, :create, :edit, :delete ] 
