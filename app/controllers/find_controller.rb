@@ -14,10 +14,6 @@ class FindController < ApplicationController
 		@posts = Post.by_year(params[:year]).by_asc_date
   end
 	
-	def google
-		@page_title = 'поиск в блоге'
-	end
-	
 	def o
 		@page_title = 'о блоге'
 	end

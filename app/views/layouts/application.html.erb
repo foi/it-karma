@@ -18,7 +18,8 @@
       //]]>
       </script>
   <% end %>
-  <%= auto_discovery_link_tag :rss, posts_url(:format => "rss"), :title => "весь этот вымысел." %>
+  <%= auto_discovery_link_tag(:atom, 'http://feeds.feedburner.com/it-karma', :title => "Весь этот вымысел.") %>
+	
 <link rel="icon" type="image/gif" href="/favicon.gif" />
 </head>
 <body>
