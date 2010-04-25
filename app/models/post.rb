@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 	
 	has_many :comments, :dependent => :destroy
 	has_many :taggings, :dependent => :destroy
-    has_many :tags, :through => :taggings
+  has_many :tags, :through => :taggings
 
 	acts_as_taggable_on :tags
 	acts_as_textiled :body
@@ -17,6 +17,9 @@ class Post < ActiveRecord::Base
 	
   named_scope :by_year, lambda { |year| { :conditions => ['created_at >= ? AND created_at <= ?', year + '-01-01', year + '-12-31'] } }
 	named_scope :by_year_month, lambda { |year, month, months| { :conditions => ['created_at >= ? AND created_at <= ?', year + '-' + month + '-01', year + '-' + month + '-' + ( if months.any? { |n| n == month } then '30' elsif month == '02' then '28' else '31' end ) ] } }
+	
+	named_scope :limit, lambda { |num| { :limit => num } }
+	
 	
 	def year
 		self.created_at.year

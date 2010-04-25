@@ -71,6 +71,13 @@ class PostsController < ApplicationController
     end
   end
 
+	def feed
+		@posts = Post.published.limit(5).by_date
+		respond_to	do |f|
+			f.atom
+		end
+	end
+
   private
 
 	def check_permission	

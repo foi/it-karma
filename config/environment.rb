@@ -11,7 +11,6 @@ Rails::Initializer.run do |config|
 	config.gem "nokogiri", :source => "http://gems.rubyforge.org"
 	config.gem "RedCloth", :lib => 'redcloth'
 	config.gem 'will_paginate', :source => 'http://gems.github.com'
-	#config.gem "deadweight", :source => 'http://rubygems.org'
 	config.action_controller.session_store = :active_record_store
 	config.time_zone = 'UTC'
 	
