@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/find/o.html.erb</string>
+	<string>config/environment.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -35,6 +35,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>app/controllers/find_controller.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>app/views/find/o.html.erb</key>
 		<dict>
 			<key>caret</key>
@@ -43,6 +57,34 @@
 				<integer>20</integer>
 				<key>line</key>
 				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>config/environment.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>config/routes.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>7</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -69,6 +111,9 @@
 		<string>app/controllers/comments_controller.rb</string>
 		<string>app/views/find/o.html.erb</string>
 		<string>public/stylesheets/scaffold.css</string>
+		<string>app/controllers/find_controller.rb</string>
+		<string>config/routes.rb</string>
+		<string>config/environment.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

@@ -4,6 +4,6 @@ rake-compiler
 rails --version 2.3.5
 nokogiri
 acts-as-taggable-on --version 1.1.7
-will_paginate --source http://gems.github.com
+will_paginate
 RedCloth
 deadweight

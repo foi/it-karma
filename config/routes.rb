@@ -6,7 +6,6 @@ ActionController::Routing::Routes.draw do |map|
 	
 	map.posts_with_pages 'posts/page/:page', :controller => 'posts', :action => 'index'
 
-	map.google 'search', :controller => 'find', :action => 'google'
 	map.o 'o_O', :controller => 'find', :action => 'o'
 	
 	map.posts_year_month 'p/:year/:month', :controller => 'find', :action => 'year_month'
