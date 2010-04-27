@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -10,33 +9,13 @@
     <title>все это вымысел!</title>
   <% end %>
   <%= stylesheet_link_tag 'scaffold' %>
-	<% if protect_against_forgery? %>
-    <script type='text/javascript'>
-        //<![CDATA[
-          window._auth_token_name = "#{request_forgery_protection_token}";
-          window._auth_token = "#{form_authenticity_token}";
-      //]]>
-      </script>
-  <% end %>
+  <%= render :partial => 'shared/forgery_protection' %>
   <%= auto_discovery_link_tag(:atom, 'http://feeds.feedburner.com/it-karma', :title => "Весь этот вымысел.") %>
-	
 <link rel="icon" type="image/gif" href="/favicon.gif" />
 </head>
 <body>
-	
 <p style="color: green"><%= flash[:notice] %></p>
-
 <%= yield %>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-12560875-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
+<%= render :partial => 'shared/analytics' %>
 </body>
 </html>

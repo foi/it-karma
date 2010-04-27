@@ -61,3 +61,4 @@ h4{font-size:20px;}
 h5{font-size:18px;}
 h6{font-size:16px;}
 #all_about{font: 150% 'Baskerville';}
+div#picture a, div#picture a:hover, div#picture a:visited  {background: #fff; padding: 0;color: #fff;}
