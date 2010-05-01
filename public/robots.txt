@@ -8,4 +8,4 @@ Allow: /
 Allow: /posts
 Disallow: /p
 Disallow: /tag
-Disallow: posts/page
+Disallow: /posts/page

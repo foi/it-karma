@@ -1,5 +1,6 @@
-require "astronow"
+require 'astronow'
 require 'rcfootnotes'
+require 'check_permission'
 
 class ApplicationController < ActionController::Base
 

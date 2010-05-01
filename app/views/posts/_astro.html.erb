@@ -1,7 +1,7 @@
-<div id="astro">
-  <div id="date"><%= post.day %> <%= link_to_unless_current h(post.month), posts_year_month_path(post.year, post.month) %> <%= link_to_unless_current h(post.year), posts_year_path(post.year) %>
+<div class="astro">
+  <div class="date"><%= post.day %> <%= link_to_unless_current h(post.month), posts_year_month_path(post.year, post.month) %> <%= link_to_unless_current h(post.year), posts_year_path(post.year) %>
 	</div>
-	<div id="time">
+	<div class="time">
    	<%= post.hour %>:<%= post.min %>:<%= post.sec %> GMT 
   </div>
    <%= post.astro_data %>
