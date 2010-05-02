@@ -1,0 +1,14 @@
+<div id="tag_cloud">
+  <% unless p.empty? -%>
+    <% tags_ = [] -%>
+    <% for tag in p do tags_ << tag.tag_list end -%>
+    <% tags_.flatten!.uniq! -%>
+    <p> 
+      %w{
+    <% for t in tags_ -%>
+      <%= link_to t, tag_path(t), :class => "tag" -%>
+    <% end %> 
+      }
+    </p>
+  <% end -%>
+</div>

@@ -1,0 +1,13 @@
+<% if posts.total_pages > 1 -%>
+  <div id="pages"><h2>
+    <% if posts.current_page != 1 -%>
+      <%= link_to '<', posts_with_pages_path(posts.previous_page) -%>
+    <% end -%>
+    <% posts.total_pages.times do |p| -%>
+      <%= link_to_unless_current (p + 1), posts_with_pages_path(p + 1) -%> 
+    <% end -%>
+    <% unless posts.next_page.nil? -%>
+      <%= link_to ">", posts_with_pages_path(posts.next_page) -%></h2>
+    <% end -%>
+  </div>
+<% end -%>

@@ -1,23 +1,23 @@
 <div class="content">
-  <% form_for(@post) do |f| %>
-	  <%= f.error_messages %>
+  <% form_for(@post) do |f| -%>
+	  <%= f.error_messages -%>
 	  <p>
-			<%= f.label :title, 'Название' %> <br />
+			<%= f.label :title, 'Название' -%> <br />
 	    <%= f.text_field :title %>
 	  </p>
 	  <p>
-		  <%= f.label :body, "содержание" %> <br />
+		  <%= f.label :body, "содержание" -%> <br />
 	    <%= f.text_area :body %>
 	  </p>
 		<p>
-			<%= f.label :tag_list, 'Tags' %>
-			<%= f.text_field :tag_list %>
+			<%= f.label :tag_list, 'Tags' -%>
+			<%= f.text_field :tag_list -%>
 	  </p>
 		<p>
-	   <%= f.check_box :published %> опубликовано ?
+	   <%= f.check_box :published -%> опубликовано ?
 		</p>
 	  <p>
-	    <%= f.submit 'ну-да' %>
+	    <%= f.submit 'ну-да' -%>
 	  </p>
-	<% end %>
+	<% end -%>
 </div>

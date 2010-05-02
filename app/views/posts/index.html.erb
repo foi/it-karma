@@ -1,42 +1,16 @@
 <div id="header">
 	<div id="links">
 			<p><a href="http://feeds.feedburner.com/it-karma"><img src="http://feeds.feedburner.com/~fc/it-karma?bg=FFCC00&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a></p>
-			<%= link_to 'o_O', o_path %>
+			<%= link_to 'o_O', o_path -%>
 	</div>
 	<img src="http://dl.dropbox.com/u/5433393/header.png" />
 </div>
-
-<div id="tag_cloud">
-	<% unless @p.empty? %>
-		<% tags_ = [] %>
-		<% for tag in @p do tags_ << tag.tag_list end %>
-		<% tags_.flatten!.uniq! %>
-		<p> 
-			%w{
-		<% for t in tags_ %>
-		  <%= link_to t, tag_path(t), :id => "tags" %>
-		<% end %> 
-		  }
-		</p>
-	<% end %>
-</div>
-<%= render :partial => 'full_post' %>
-
-<% if admin? %>
-  <%= link_to 'Написать новое', new_post_path %>
+<%= render :partial => 'shared/tag_cloud', :locals => { :p => @p } -%>
+<%= render :partial => 'full_post' -%>
+<% if admin? -%>
+  <%= link_to 'Написать новое', new_post_path -%>
 <% end %>
-
-<% if @posts.total_pages > 1 %>
-	<div id="pages"><h2>
-		<% if @posts.current_page != 1 %>
-			<%= link_to '<', posts_with_pages_path(@posts.previous_page) %>
-		<% end %>
-		<% @posts.total_pages.times do |p| %>
-			<%= link_to_unless_current (p + 1), posts_with_pages_path(p + 1)%> 
-		<% end %>
-		<%= link_to ">", posts_with_pages_path(@posts.next_page) %></h2>
-	</div>
-<% end %>
+<%= render :partial => 'shared/pages', :locals => { :posts => @posts } -%>
 <div id="footer">
 	<img src="http://dl.dropbox.com/u/5433393/footer.png" />
 </div>
