@@ -15,7 +15,7 @@ class FindController < ApplicationController
   end
 	
 	def o
-		@page_title = 'о блоге'
+		@page_title = t :about
 	end
 
 end

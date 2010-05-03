@@ -22,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @page_title = t :record_create
     @post = Post.new
     respond_to do |format|
       format.html
@@ -29,19 +30,18 @@ class PostsController < ApplicationController
   end
 
   def edit
-	  @page_title = 'изменить'
+	  @page_title = t :record_modify
     @post = Post.find(params[:id])
     @tags = @post.tag_list
   end
 
   def create
-	  @page_title = "написать"
     @post = Post.new(params[:post])
 		@post.astro_data = get_astro
 		@post.color = $moon_color
     respond_to do |format|
       if @post.save
-        flash[:notice] = 'Запись успешно запощена'
+        flash[:notice] = t :record_created
         format.html { redirect_to(@post) }
       else
         format.html { render :action => "new" }
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        flash[:notice] = 'Запись успешно изменена'
+        flash[:notice] = t :record_modified
         format.html { redirect_to(@post) }
       else
         format.html { render :action => "edit" }
@@ -64,7 +64,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-
+    flash[:notice] = t :record_deleted
     respond_to do |format|
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
@@ -73,7 +73,7 @@ class PostsController < ApplicationController
 
 	def feed
 		@posts = Post.published.limit(5).by_date
-		respond_to	do |f|
+		respond_to do |f|
 			f.atom
 		end
 	end

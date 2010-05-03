@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<% if @page_title -%>
-		<title><%= @page_title -%> - это вымысел</title>
+		<title><%= @page_title -%> - <%= t :title_fiction -%></title>
 	<% else -%>
-    <title>все это вымысел!</title>
+    <title><%= t :title -%></title>
   <% end -%>
   <%= render :partial => 'shared/meta_content', :locals => { :post => @post } -%>
   <%= stylesheet_link_tag 'scaffold' %>
@@ -14,7 +14,7 @@
 <link rel="icon" type="image/gif" href="/favicon.gif" />
 </head>
 <body>
-<p style="color: green"><%= flash[:notice] %></p>
+<%= render :partial => 'shared/flash_notice' -%>
 <%= yield %>
 <%= render :partial => 'shared/analytics' %>
 </body>

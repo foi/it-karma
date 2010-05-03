@@ -1,7 +1,7 @@
-<% if @comments.empty? %>
-	<h1><%= "Еще никто не писал :/" %></h1>
-<% else %>
+<% if @comments.empty? -%>
+	<h1><%= t :no_comments -%></h1>
+<% else -%>
 	<% for c in @comments %>
-		<%= render :partial => 'comments/comment_index', :locals => { :c => c } %>
-	<% end %>
-<% end %>
+		<%= render :partial => 'comments/comment_index', :locals => { :c => c } -%>
+	<% end -%>
+<% end -%>

@@ -1,12 +1,13 @@
 <div id="wrap_p_and_c">
-  <%= render :partial => 'show_post' %>
+  <%= render :partial => 'show_post' -%>
 <div id="cc">
-<% for c in @comments %>
-	<%= render :partial => 'comments/comment', :locals => { :c => c } %>
-<% end %>
+<% for c in @comments -%>
+	<%= render :partial => 'comments/comment', :locals => { :c => c } -%>
+<% end -%>
 </div>
+<hr />
 <img id="textile" src="http://dl.dropbox.com/u/5433393/textile.png"/>
-<%= render :partial => 'comments/form', :locals => { :id => @post.id } %>
+<%= render :partial => 'comments/form', :locals => { :id => @post.id } -%>
 <br />
-<h3><%= link_to 'назад', root_url %> </h3>
+<h3><%= link_to "#{ t :back }", root_url -%> </h3>
 </div>

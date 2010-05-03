@@ -2,22 +2,23 @@
   <% form_for(@post) do |f| -%>
 	  <%= f.error_messages -%>
 	  <p>
-			<%= f.label :title, 'Название' -%> <br />
+      <%= f.label :title -%> <br />
 	    <%= f.text_field :title %>
 	  </p>
 	  <p>
-		  <%= f.label :body, "содержание" -%> <br />
+		  <%= f.label :body -%> <br />
 	    <%= f.text_area :body %>
 	  </p>
 		<p>
-			<%= f.label :tag_list, 'Tags' -%>
+			<%= f.label :tag_list -%>
 			<%= f.text_field :tag_list -%>
 	  </p>
 		<p>
-	   <%= f.check_box :published -%> опубликовано ?
+     <%= f.label :published -%>
+	   <%= f.check_box :published -%> 
 		</p>
 	  <p>
-	    <%= f.submit 'ну-да' -%>
+	    <%= f.submit "#{ t :record_yes }" -%>
 	  </p>
 	<% end -%>
 </div>

@@ -8,8 +8,8 @@
 <%= render :partial => 'shared/tag_cloud', :locals => { :p => @p } -%>
 <%= render :partial => 'full_post' -%>
 <% if admin? -%>
-  <%= link_to 'Написать новое', new_post_path -%>
-<% end %>
+  <%= link_to "#{ t :new_record }", new_post_path -%>
+<% end -%>
 <%= render :partial => 'shared/pages', :locals => { :posts => @posts } -%>
 <div id="footer">
 	<img src="http://dl.dropbox.com/u/5433393/footer.png" />

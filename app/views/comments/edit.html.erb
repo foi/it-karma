@@ -1,28 +1,24 @@
-<h1>Изменить комментарий</h1>
-
-<% form_for(@comment) do |f| %>
-  <%= f.error_messages %>
-
+<h1><%= t :modify_comment -%></h1>
+<% form_for(@comment) do |f| -%>
+  <%= f.error_messages -%>
   <p>
-    <%= f.label :post_id %><br />
-    <%= f.text_field :post_id %>
+    <%= f.label :post_id -%><br />
+    <%= f.text_field :post_id -%>
   </p>
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name -%><br />
+    <%= f.text_field :name -%>
   </p>
   <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email -%><br />
+    <%= f.text_field :email -%>
   </p>
   <p>
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
+    <%= f.label :comment -%><br />
+    <%= f.text_area :comment -%>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit "#{ t :comment_modify_yes }" -%>
   </p>
-<% end %>
-
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<% end -%>
+<%= link_to "#{ t :back}", comments_path -%>

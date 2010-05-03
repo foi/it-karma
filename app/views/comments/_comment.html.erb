@@ -2,9 +2,9 @@
 	<div class="c_ava">
 			<%= image_tag('http://www.gravatar.com/avatar.php?gravatar_id=' + Digest::MD5.hexdigest(h(c.email.downcase)) + '&size=70', :id => "comment_ava" ) %>
 	</div> 
-	<div class="c_name"><b><%= c.name %></b> написал(а):<div class="c_date" style='border-bottom: 1px solid <%= $post_color %>'> <%= c.created_at.to_s(:db) %> GMT</div></div>
+	<div class="c_name"><b><%= c.name %></b> написал(а):<div class="c_date"> <%= c.created_at.to_s(:db) %> GMT</div></div>
 	<div class="c_ava_and_c">
-			<div class="c_comment" style='border-bottom: 1px solid <%= $post_color %>'>
+			<div class="c_comment">
 				<%= c.comment %>
 			</div>
 	</div>

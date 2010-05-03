@@ -2,10 +2,10 @@ class SessionController < ApplicationController
 	
 	before_filter :authenticate
 	
-	def index
+  def index
 		redirect_to root_url
-	end
-	
+  end
+  
 	private
 	
 	def authenticate

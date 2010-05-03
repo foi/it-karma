@@ -2,31 +2,18 @@ require 'digest'
 
 class CommentsController < ApplicationController
 
-	before_filter :check_permission, :only => [ :edit, :delete, :update, :show ]
+	before_filter :check_permission, :only => [ :edit, :delete, :update, :index ]
 
   def index
+    @page_title = t :comments_index
     @comments = Comment.by_date
     respond_to do |format|
       format.html 
     end
   end
 
-  def show
-    @comment = Comment.find(params[:id])
-    respond_to do |format|
-      format.html
-    end
-  end
-
-  def new
-    @comment = Comment.new
-    respond_to do |format|
-      format.html
-			format.js { render :layout => false }
-    end
-  end
-
   def edit
+    @page_title = t :comment_modify
     @comment = Comment.find(params[:id])
   end
 
@@ -34,9 +21,10 @@ class CommentsController < ApplicationController
     @comment = Comment.new(params[:comment])
     respond_to do |format|
       if verify_recaptcha && @comment.save 
+        flash[:notice] = t :comment_created
         format.html { redirect_to post_path(@comment.post_id) }
       else
-	      flash[:error] = "<img src='http://www.picamatic.com/show/2009/07/20/05/40/4505269_18x18.gif'>"
+        flash[:notice] = t :comment_error
         format.html { redirect_to post_path(@comment.post_id) }
       end
     end
@@ -46,7 +34,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
-        flash[:notice] = 'Comment was successfully updated.'
+        flash[:notice] = t :comment_modifed
         format.html { redirect_to comments_path }
       else
         format.html { render :action => "edit" }
@@ -57,7 +45,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-
+    flash[:notice] = t :comment_deleted
     respond_to do |format|
       format.html { redirect_to(comments_url) }
     end
