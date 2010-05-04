@@ -5,7 +5,7 @@ atom_feed do |feed|
 	for p in @posts
 		feed.entry(p) do |e|
 			e.title p.title
-			e.content p.body, :type => 'html'
+			e.content truncate(strip_tags(p.body), :length => 1330) + "#{ link_to ' читать далее', post_path(p)} ", :type => 'html'
 			
 			e.author do |author|
 				author.name("foi")
