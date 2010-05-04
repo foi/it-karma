@@ -12,6 +12,8 @@ ActionController::Routing::Routes.draw do |map|
 	map.posts_year 'p/:year', :controller => 'find', :action => 'year'
 	
 	map.feed 'feed', :controller => 'posts', :action => 'feed'
+	map.sitemap '/sitemap.xml', :controller => 'sitemap'
+	
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
