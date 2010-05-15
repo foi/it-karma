@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "posts", :action => "index"
 	map.tag '/tag/:id', :controller => 'tags', :action => 'show'
 	
-	map.posts_with_pages 'posts/page/:page', :controller => 'posts', :action => 'index'
+	map.posts_with_pages '/page/:page', :controller => 'posts', :action => 'index'
 
 	map.o 'o_O', :controller => 'find', :action => 'o'
 	
