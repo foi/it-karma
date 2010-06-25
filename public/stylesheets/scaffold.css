@@ -90,6 +90,7 @@ min-width:940px;
 
 #post_body,#post_title {
 width:870px;
+font-family:"Palatino Linotype";
 }
 
 #post_tag_list {
@@ -285,9 +286,7 @@ vertical-align:middle;
 
 blockquote {
 font:italic 120% serif;
-border-top:2px solid #ccc;
-border-bottom:2px solid #ccc;
-color:#606060;
+color:#0FBBFF;
 }
 
 .wrapper,#wrap_p_and_c,#about {
@@ -374,3 +373,6 @@ margin-top:50px;
 	font-size:18px;
 	font-style: italic;
 }
+
+div.center{text-align:center;}
+span.i{color:#0FBBFF;}
