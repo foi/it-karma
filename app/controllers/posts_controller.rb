@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   def index
 		session[:admin] ? @posts = Post.by_date : @posts = Post.published.by_date
 		@p = @posts
+    #@tags_for_tag_cloud = Post.tag_counts_on(:tags)
 		@posts = @posts.paginate :page => params[:page]
 	  respond_to do |format|
 	  	format.html
@@ -13,6 +14,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    response.headers['Cache-Control'] = 'public, max-age=300'
     @post = Post.find(params[:id])
 		@page_title = @post.title
 		@comments = Comment.find(:all, :conditions => ["post_id = ?", params[:id]])

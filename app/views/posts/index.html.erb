@@ -3,6 +3,9 @@
 	<img src="http://dl.dropbox.com/u/5433393/header.png" />
 </div>
 <%= render :partial => 'shared/tag_cloud', :locals => { :p => @p } -%>
+<%# tag_cloud(@tags_for_tag_cloud, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+  <%#= link_to tag.name, tag_path(tag.name), :class => css_class %> 
+<%# end %>
 <%= render :partial => 'full_post' -%>
 <% if admin? -%>
   <%= link_to "#{ t :new_record }", new_post_path -%>
