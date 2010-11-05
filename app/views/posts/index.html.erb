@@ -2,10 +2,18 @@
 	<%= render 'shared/links' -%>
 	<img src="http://dl.dropbox.com/u/5433393/header.png" />
 </div>
-<%= render :partial => 'shared/tag_cloud', :locals => { :p => @p } -%>
-<%# tag_cloud(@tags_for_tag_cloud, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-  <%#= link_to tag.name, tag_path(tag.name), :class => css_class %> 
-<%# end %>
+<%#= render :partial => 'shared/tag_cloud', :locals => { :p => @p } -%>
+<% unless @tags_for_tag_cloud.empty? %>
+  <div id="tag_cloud">
+  <p> 
+    %w{
+      <% tag_cloud @tags_for_tag_cloud, %w(t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12) do |name, css_class|  %> 
+        <%= link_to name, tag_path(name), :id => name, :class => css_class %>
+      <% end %>
+      }
+      </p>
+    </div>
+<% end %>
 <%= render :partial => 'full_post' -%>
 <% if admin? -%>
   <%= link_to "#{ t :new_record }", new_post_path -%>

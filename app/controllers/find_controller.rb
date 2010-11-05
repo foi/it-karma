@@ -15,7 +15,9 @@ class FindController < ApplicationController
   end
 	
 	def o
+    response.headers['Cache-Control'] = 'public, max-age=300'
 		@page_title = t :about
+		@content = t :content_about
 	end
 
 end

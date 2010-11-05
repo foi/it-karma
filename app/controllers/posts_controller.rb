@@ -4,8 +4,7 @@ class PostsController < ApplicationController
  
   def index
 		session[:admin] ? @posts = Post.by_date : @posts = Post.published.by_date
-		@p = @posts
-    #@tags_for_tag_cloud = Post.tag_counts_on(:tags)
+    @tags_for_tag_cloud = Post.tag_counts_on(:tags)
 		@posts = @posts.paginate :page => params[:page]
 	  respond_to do |format|
 	  	format.html
