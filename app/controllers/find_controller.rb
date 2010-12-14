@@ -19,5 +19,10 @@ class FindController < ApplicationController
 		@page_title = t :about
 		@content = t :content_about
 	end
+	
+	def archive
+    response.headers['Cache-Control'] = 'public, max-age=900'
+    session[:admin] ? @posts = Post.all : @posts = Post.published
+  end
 
 end

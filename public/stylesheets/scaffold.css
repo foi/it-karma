@@ -107,7 +107,7 @@ min-width:800px;
 margin:10px;
 }
 
-li a,li a:hover,li a:visited,.content p > a,.date > a,.content p > a:hover,.date > a:hover,.content p > a:visited,.date > a:visited,.tags a,.tags a:hover,.tags a:visited,#tag_cloud a,#tag_cloud a:hover,#tag_cloud a:visited,#all_about a,#all_about a:hover,#all_about a:visited,.title a,#pages a,#links a,div.footnote > a, a {
+li a,li a:hover,li a:visited,.content p > a,.date > a,.content p > a:hover,.date > a:hover,.content p > a:visited,.date > a:visited,.tags a,.tags a:hover,.tags a:visited,#tag_cloud a,#tag_cloud a:hover,#tag_cloud a:visited,#all_about a,#all_about a:hover,#all_about a:visited,.title a,#pages a,#links a,div.footnote > a, a, .a_title {
 font:Georgia,serif;
 text-decoration:none;
 padding:1px 3px;
@@ -388,3 +388,12 @@ span.i{color:#0FBBFF;}
 .t10 { font-size:100%;}
 .t11 { font-size:105%;}
 .t12 { font-size:110%;}
+
+.a_title {
+	font-family: Arial;
+}
+
+.a_date { 
+	font-style: italic;
+	color: #ccc;
+}

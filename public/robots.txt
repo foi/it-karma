@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /p
 Disallow: /tag
 Disallow: /page
+Disallow: /archive
 Allow: /posts
 Allow: /
 Sitemap: http://it-karma.ru/sitemap.xml

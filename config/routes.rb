@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
 
 	map.o 'o_O', :controller => 'find', :action => 'o'
 	
+	map.archive 'archive', :controller => 'find', :action => 'archive'
+	
 	map.posts_year_month 'p/:year/:month', :controller => 'find', :action => 'year_month'
 	map.posts_year 'p/:year', :controller => 'find', :action => 'year'
 	
