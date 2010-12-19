@@ -14,7 +14,7 @@ Rails::Initializer.run do |config|
 	config.gem "russian"
 	config.gem "hpricot"
 	config.gem "htmlentities"
-	config.action_controller.session_store = :active_record_store
+	#config.action_controller.session_store = :active_record_store
 	config.time_zone = 'UTC'
 end
 
