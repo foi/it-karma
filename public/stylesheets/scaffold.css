@@ -285,8 +285,8 @@ vertical-align:middle;
 }
 
 blockquote {
-font:italic 120% serif;
-color:#0FBBFF;
+font:italic 125% serif;
+color:#000;
 }
 
 .wrapper,#wrap_p_and_c,#about {
@@ -399,3 +399,5 @@ span.i{color:#0FBBFF;}
 }
 
 #links { width: 350px }
+
+#pages { font-family: Arial }
