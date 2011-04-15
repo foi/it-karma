@@ -10,8 +10,8 @@
 <div class="tags">
   <p>
     <% for tag in post.tags -%>
-      <%= link_to tag, tag_path(tag.name) -%> 
-    <% end -%>
+      <%= link_to tag, tag_path(tag.name) -%>
+    <% end -%> 
   </p>
 </div>
 <div class="comments"><%= link_to post.comments.size, post_path(post) -%></div>
